@@ -1,0 +1,159 @@
+/* Existing CSS */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Mono:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+#app {
+  position: relative;
+  z-index: 1;
+}
+
+/* Update z-index for .popup-overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* Ensure it's on top */
+}
+
+
+.popup-content {
+  background: rgb(0, 0, 0);
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  max-width: 90%;
+}
+
+/* Button Styles */
+.golBtn {
+  background-color: #332102;
+  color: #f1d712;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.golBtn:hover {
+  background-color: #191001;
+  transform: scale(1.05);
+}
+
+.golBtn:active {
+  background-color: #9d8c0d;
+  transform: scale(0.95);
+}
+
+/* Grid Styles */
+.grid-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 1px;
+  padding-bottom: 20px;
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #333;
+  background: radial-gradient(circle, #808080, #000); /* Default inactive cell color */
+}
+
+.cell.active {
+  background: yellow; /* Active cells are yellow */
+}
+
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #ffc003cc;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s, background-color 0.2s;
+}
+.slider:hover {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #61ef15fb;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #263059d2;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.slider:disabled {
+  background-color: #ccc; /* Change slider background when disabled */
+  cursor: not-allowed; /* Change cursor to not-allowed when disabled */
+}
+.slider:disabled::-webkit-slider-thumb {
+  background: #999; /* Change thumb color when disabled */
+}
+.slider:disabled::-moz-range-thumb {
+  background: #999; /* Change thumb color when disabled */
+}
+.control-button {
+  font-family: 'Lobster', cursive;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure modal is on top */
+}
+.modal-content {
+  background-color: #263059d2;
+  padding: 20px;
+  border: 1px solid #ffc003cc;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1001; /* Ensure modal content is above everything else */
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ffc003cc;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1002; /* Ensure close button is clickable */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
