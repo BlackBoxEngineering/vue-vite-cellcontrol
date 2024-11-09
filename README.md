@@ -1,4 +1,4 @@
-# vue-vite-cellcontrol
+# VUE-VITE-CELL-CONTROL
 Using vue and tailwinds to create and animate conways game of life.
 
 # FORWARD
@@ -15,7 +15,7 @@ npm install
 npm run dev
 
 # Todo Notes
-Not much to do here, a scoring system and some data handling maybe.
+Not much to do here, a scoring system, styling, data handling.
 
 # Controls 
 Click or click+drag on the grid to activate cells.
